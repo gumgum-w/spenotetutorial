@@ -1,33 +1,333 @@
 <!DOCTYPE html>
-<!-- Copyright 2013 The Flutter Authors. All rights reserved.
-Use of this source code is governed by a BSD-style license that can be
-found in the LICENSE file. -->
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Load file or HTML string example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Spentrail Tutorial Page</title>
 
     <style>
+        body
+        {
+            font-family:Arial;
+            padding:6px 9px;
+            text-align:center;
+        }
         h1 {
-            color : #ccFF01;
+            color : #222;
         }
 
-        img.profile {
+        .text-center{text-align : center !important}
+
+        img {
           width : 100%;
-          border-radius: 50%;
-          max-width : 120px;
           min-width : 120px;
+          max-width : 320px;
         }
 
-        .profile {
-            color : red
+        .list a.btn
+        {
+            color : #ccc;
         }
+
+        .list a.active, .list
+        {
+            color : #de4444;
+        }
+
+        li {list-style-type:none}
+
+        .d-none{display : none}
+
+        a {cursor:pointer}
     </style>
+
 </head>
 <body>
 
-<h1>frferef</h1>
+<h1>Spentrail's Tutorial</h1>
 <p>
-    This is an example page used to demonstrate how to load a local file or HTML
-    string using the <a href="https://pub.dev/packages/webview_flutter">Flutter
-    webview</a> plugin.
+    This page used to demonstrate how to use Spentrail app. These list of the tutorial on below :
+    <div id="my_div" class="list">
+        <li><a class="btn active" onclick="alt('qst')">Quick Start</a></li>
+        <li><a class="btn" onclick="alt('hst')">History</a></li>
+        <li><a class="btn" onclick="alt('ast')">Add Store</a></li>
+        <li><a class="btn" onclick="alt('ait')">Add Items</a></li>
+        <li><a class="btn" onclick="alt('act')">Add Category</a></li>
+        <li><a class="btn" onclick="alt('aut')">Add Units</a></li>
+    </div>
 </p>
+
+<div class="tutorial" id="qst">
+<h2>Quick Start</h2>
+<p>
+    Please tab on <b>Add Shop</b> to create note of your spent<br/>
+    <div class="text-center"><img src="image/shop/add_shop.png"></div><br/>
+
+    Afterward you will see form like this : <br/><br/>
+    <div class="text-center"><img src="image/shop/add_shop_1.png"></div><br/>
+
+    <div>
+        Form <b>A</b> : indicates the date when you make a note of shopping / spending your budget.
+    </div>
+    <br/>
+    <div>
+        Form <b>B</b> : indicates which store that you went shopping at.
+    </div><br/>
+
+    If you tap on <b>date</b> (form <b>A</b>) you will see a page like this : <br/><br/>
+    <div class="text-center"><img src="image/shop/add_shop_1a.png"></div><br/>
+
+    and when you tap on <b>store</b> (form <b>B</b>) you will see :<br/><br/>
+    <div class="text-center"><img src="image/store/add_store_0.png"></div><br/>
+
+    Tab on (+) button to add store, and then you will be redirected to this page : <br/><br/>
+    <div class="text-center"><img src="image/store/add_store_1.png"></div><br/>
+    Fill in the required form as <b>Store Name</b> and others are optional, then tab on button <b>Submit</b>.<br/><br/>.
+    For more detail about add store please take a look : <a class="list" onclick="alt('ast')">Add Store</a>.<br/><br/>
+
+    <b>NOTE :</b> if you have created a store already before, you can add by tapping on the title. In here for example you can tapping at <b>test store</b><br/><br/>
+
+    After you tap on the submit button, you will be redirected back to the previous page, but with the name of the store : <br/><br/>
+    <div class="text-center"><img src="image/shop/add_shop_1c.png"></div><br/>
+
+    <b>Note : </b> You can also fill in a description of your spending, but this is optional.<br><br/>
+
+    Now, it's time to add your items into cart, please tap on cart button :<br><br/>
+    <div class="text-center"><img src="image/shop/add_shop_2.png"></div><br/>
+
+    it will display a popup form :<br><br/>
+    <div class="text-center"><img src="image/shop/add_shop_2x.png"></div><br/>
+
+    <div>
+        Form <b>A</b> : indicates item name you want to note and save, To add item please take a look : <a onclick="alt('ait')" class="list">Add Item</a>.
+    </div>
+    <br/>
+    <div>
+        Form <b>B</b> : indicates unit name of item to scale the item, this is optional, to add unit please see : <a class="list">Add Unit</a>.
+    </div>
+    <br/>
+    <div>
+        Form <b>C</b> : indicates the price of item, this will show : <br/><br/>
+        <img src="image/shop/add_shop_3.png"><br/><br/>
+        The max length of numbers is <b>9</b> for example : <b>1,000,000,000</b> and also the max decimal number is <b>2</b> so it will : <b>1,000,000,000.11</b>
+        Afterward tap at <b>E/C</b> if you want to add the number.
+    </div>
+    <br/>
+    <div>
+        Form <b>D</b> : indicates the quantity of item, this will show : <br/><br/>
+        <img src="image/shop/add_shop_4.png"><br/><br/>
+        The max value of qty is <b>1,000</b> and decimal number not available
+        tap at <b>E/C</b> to insert the qty.
+    </div>
+    <br/>
+    <b>Note :</b> if you want to change the value of <b>price</b> or <b>qty</b> just change the number or if you want to cancel or make it empty just delete the whole number OR leave it empty and then tap at <b>E/C</b>.
+
+    <br/><br/>
+    Here the result after you fill the whole form : <br/><br/>
+    <img src="image/shop/add_shop_5.png"><br/><br/>
+
+    Tap at submit button, then cart will displaying : <br/>
+    <img src="image/shop/add_shop_6.png"><br/><br/>
+
+    Then finally tap at submit button then congratulation or your create your first transaction,<br>
+    it will show notification at the bottom screen : <br/><br/>
+    <img src="image/shop/add_shop_7.png"><br/><br/>
+
+    To check tour transaction you can visit <a onclick="alt('hst')" class="list">history page</a>.
+    </p>
+</div>
+
+<div class="tutorial d-none" id="hst">
+    <h2>History</h2>
+    <p>
+        <h3>A.Report</h3>
+        After you created transaction successfully, in this page you can see about yours
+        transaction records.<br/>
+        please tap on  : <br/><br/>
+        <img src="image/history/history_0.png"><br/><br/>
+        <img src="image/history/history_1.png"><br/><br/>
+        <div>
+            Form <b>A</b> : indicates which date the transaction that you want to see.<br/><br/>
+            <img src="image/history/history_2A.png"><br/><br/>
+            The arrows indicates to show calendar as options to change the date : <br/><br/>
+            <img src="image/history/history_2Ax.png"><br/><br/>
+        </div>
+        <br/>
+        <div>
+            Form <b>B</b> : indicates the date of transaction, you can expand this option : <br/><br/>
+            <img src="image/history/history_2b.png"><br/><br/>
+            <div>
+                Form <b>X</b> : indicates to show description of transaction : <br/><br/>
+                <img src="image/history/history_2bx.png">
+            </div>
+        </div>
+
+    </p>
+    <p>
+        <h3>B.Charts</h3>
+        The history data can be displayed as charts also : <br/><br/>
+        <img src="image/history/history_3.png"><br/><br/>
+        The button <b>Show Calendar</b> will also have same effects as calendar icon at report page.
+    </p>
+</div>
+
+<div class="tutorial d-none" id="ast">
+    <h2>Add Store</h2>
+    <p>
+        To Add Store, first tap on icon : <br/><br/>
+        <img src="image/store/add_store.png"><br/><br/>
+        it will redirect to : <br/><br/>
+        <img id="store_add" src="image/store/add_store_0.png"><br/><br/>
+        tap plus icon and then tap on submit button : <br/><br/>
+        <img src="image/store/add_store_1.png"><br/><br/>
+        after you tap on submit button you will be redirect into page : <br/><br/>
+        <img src="image/store/add_store_2.png"><br/><br/>
+
+        <div>
+            Form <b>A</b> : To add store the same effects as plus button <a class="list" href="#store_add">here</a>.
+        </div>
+        <br/>
+        <div>
+            Form <b>B</b> : To show detail about the store you saved. <br/><br/>
+            <img src="image/store/add_store_3.png">
+        </div>
+        <br/>
+    </p>
+</div>
+
+<div class="tutorial d-none" id="ait">
+    <h2>Add Item</h2>
+    <p>
+        To Add item, first tap on icon : <br/><br/>
+        <img src="image/item/add_item.png"><br/><br/>
+        it will redirect to : <br/><br/>
+        <img id="item_add" src="image/item/add_item_0.png"><br/><br/>
+        tap plus icon and then tap on submit button : <br/><br/>
+        <img src="image/item/add_item_1.png"><br/><br/>
+
+        <div>
+            Form <b>A</b> : To add item's category, regarding how to add category you can see here : <a onclick="alt('act')" class="list">Add Category</a>.
+        </div>
+        <br/>
+        <div>
+            Form <b>B</b> : To put an image on item. You can put it from gallery or by taking a photo either <br/><br/>
+            <img src="image/item/add_item_2.png">
+        </div>
+        <br/>
+
+        If you choose to use an image it will be : <br/><br/>
+        <img src="image/item/add_item_3.png"><br/><br/>
+
+        Tap at submit button, and then it will redirect to : <br/><br/>
+        <img src="image/item/add_item_4.png"><br/><br/>
+
+        <div>
+            Form <b>A</b> : To add item the same effects as plus button <a class="list" href="#item_add">here</a>.
+        </div>
+        <br/>
+        <div>
+            Form <b>B</b> : To display detail image item, and you can download it.<br/>
+            <b>NOTE : </b> if you add item without an image, this icon button won't appear.
+            <br/><br/>
+            <img src="image/item/add_item_5.png">
+        </div>
+        <br/>
+        <div>
+            Form <b>C</b> : To edit your saved item.
+        </div>
+        <br/>
+    </p>
+</div>
+
+<div class="tutorial d-none" id="act">
+    <h2>Add Category</h2>
+    <p>
+        To Add Category, first tap on icon : <br/><br/>
+        <img src="image/category/add_category_0.png"><br/><br/>
+        it will redirect to : <br/><br/>
+        <img id="category_add" src="image/category/add_category_1.png"><br/><br/>
+        Fill the form, and tap the submit button, <br/><br/>
+        <img src="image/category/add_category_2.png"><br/><br/>
+        and then it will redirect to : <br/><br/>
+        <img src="image/category/add_category_4.png"><br/><br/>
+        <b>NOTE : </b>If you open this page from item page, to add category/subcategory into item
+        the <b>Eye</b> icon (B) will be change like this : <br/><br/>
+        <img src="image/category/add_category_3.png"><br/><br/>
+
+        <div>
+            Form <b>A</b> : To add category the same effects as plus button <a class="list" href="#category_add">here</a>.
+        </div>
+        <br/>
+        <div>
+            Form <b>B</b> : To display subcategory page, you can create subcategory page here.<br/><br/>
+            <img src="image/category/add_sub_category.png"><br/><br/>
+            
+            Tap at plus icon and form will appear : <br/><br/>
+            <img src="image/category/add_sub_category_2.png"><br/><br/>
+
+            Fill the subcategory name and the tap at submit button, then : <br/><br/>
+            <img src="image/category/add_sub_category_3.png">
+        </div>
+        <br/>
+        <div>
+            Form <b>C</b> : To edit your saved category.
+        </div>
+        <br/>
+    </p>
+</div>
+
+<div class="tutorial d-none" id="aut">
+    <h2>Add Units</h2>
+    <p>
+        To Add Unit, first tap on icon : <br/><br/>
+        <img src="image/units/add_units.png"><br/><br/>
+        it will redirect to : <br/><br/>
+        <img id="unit_add" src="image/units/add_units_1.png"><br/><br/>
+        Tap at plus button, and then form will appear, fill the form <br/><br/>
+        <img src="image/units/add_units_2.png"><br/><br/>
+        tap at submit button and then it will be redirect to : <br/><br/>
+        <img src="image/units/add_units_3.png"><br/><br/>
+
+        <div>
+            Form <b>A</b> : To add unit the same effects as plus button <a class="list" href="#unit_add">here</a>.
+        </div>
+        <br/>
+        <div>
+            Form <b>B</b> : To display detail page of unit<br/><br/>
+            <img src="image/units/add_units_4.png"><br/><br/>
+        </div>
+        <br/>
+    </p>
+</div>
+
+</body>
+
+<script>
+
+    var el = document.querySelectorAll(".btn");
+    function alt(sel)
+    {
+        var g = document.getElementById('my_div');
+        for (var i = 0, len = g.children.length; i < len; i++)
+        {
+            el[i].classList.remove("active");
+            (function(index){
+                g.children[i].onclick = function(){
+                    // alert(index);
+                    el[index].classList.add("active");
+                }    
+            })(i);
+        }
+
+        const query = document.querySelectorAll(".tutorial");
+        for (let i = 0; i < query.length; i++) {
+          query[i].classList.add("d-none");
+        }
+
+        setTimeout(()=>{
+            document.getElementById(sel).classList.remove("d-none");
+        },150);
+    }
+</script>
+
+</html>
