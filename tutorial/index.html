@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <title>SpenTracker Tutorial Page</title>
+    <title>Spentracker Tutorial Page</title>
 
     <style>
         body
@@ -29,6 +29,11 @@
             color : #ccc;
         }
 
+        .list a.btn:hover
+        {
+            color : #ff8c09;
+        }
+
         .list a.active, .list
         {
             color : #de4444;
@@ -44,9 +49,9 @@
 </head>
 <body>
 
-<h1>SpenTracker's Tutorial</h1>
+<h1>Spentracker's Tutorial</h1>
 <p>
-    This page used to demonstrate how to use SpenTracker app. These list of the tutorial on below :
+    This page used to demonstrate how to use Spentracker app. These list of the tutorial on below :
     <div id="my_div" class="list">
         <li><a class="btn active" onclick="alt('qst')">Quick Start</a></li>
         <li><a class="btn" onclick="alt('hst')">History</a></li>
@@ -54,6 +59,7 @@
         <li><a class="btn" onclick="alt('ait')">Add Items</a></li>
         <li><a class="btn" onclick="alt('act')">Add Category</a></li>
         <li><a class="btn" onclick="alt('aut')">Add Units</a></li>
+        <li><a class="btn" onclick="alt('res')">Backup And Restore Data</a></li>
     </div>
 </p>
 
@@ -127,16 +133,23 @@
     <img src="image/shop/add_shop_5.png"><br/><br/>
 
     Tap at submit button, then cart will displaying : <br/>
-    <img src="image/shop/add_shop_6.png"><br/><br/>
+    <img src="image/shop/add_shop_6.png" /><br/><br/>
+
+    <b>Note</b> : If you want to upload a receipt (this is optional) you can tap on  :<br/><br/>
+    <img src="image/shop/add_shop_6a.png"><br/>
+    It will display : <br/><br/>
+    <img src="image/shop/add_shop_6b.png"><br/>
+    Then choose a receipt image or photo. Ii will showing : <br /><br/>
+    <img src="image/shop/add_shop_6c.png"><br/>
 
     Then finally tap at submit button then congratulation or your create your first transaction,<br>
     it will show notification at the bottom screen : <br/><br/>
     <img src="image/shop/add_shop_7.png"><br/><br/>
 
-    <h2>Multi Shop</h2>
+    <h2>Add To Shopping List</h2>
 
-    Multishop is to note your transaction temporarily,<br/> you can decide whether want to delete it or save it into history
-    Just do the same as first transaction but choose multishop form <b>Yes</b>: <br/><br/>
+    Add To Shopping List option is to note your transaction temporarily,<br/> you can decide whether want to delete it or save it into history
+    Just do the same as first transaction but choose Add To Shopping List form <b>Yes</b>: <br/><br/>
     <img src="image/shop/add_shop_8.png"><br/><br/>
     <img src="image/shop/add_shop_9.png"><br/><br/>
     <img src="image/shop/add_shop_10.png"><br/><br/>
@@ -146,11 +159,16 @@
     <div class="text-center"><img src="image/shop/add_shop_12.png"></div><br/>
     <div class="text-center"><img src="image/shop/add_shop_13.png"></div><br/>
 
+    <p>
+        <b>Note</b> : If you choose <b>Yes</b> to <b>Add To Shopping List</b> you cannot to upload a receipt at front page, you can upload a receipt photo/image at shopping list page
+    </p>
+
+    Tap on <b>Save to History</b> and your transaction will saved to history.<br/>
     To check your transactions you can visit <a onclick="alt('hst')" class="list">history page</a>.
     </p>
 
     <i>
-        Source : Image generated with Google Gemini<br/>
+        Source : Image item like grape, apple generated with Google Gemini<br/>
     </i>
 </div><!-- end tutorial -->
 
@@ -173,20 +191,29 @@
             The arrows indicates to show calendar as options to change the date : <br/><br/>
             <img src="image/history/history_2Ax.png"><br/><br/>
 
-            Form <b>A2</b> : indicates if want to see the entire records, <b>WARNING</b> : this may slow your app.<br/><br/>
-            <img src="image/history/history_2b1.png"><br/><br/>
+             Form <b>A2</b> : Indicates if you want to see the entire records, <br/>
+             <b>NOTE</b> : Search for something to see this option. After type the query don't forget to tap on this button to generate new results.<br/><br/>
+            <img src="image/history/history_2AB.png"><br/><br/>
+            <!--<img src="image/history/history_2b1.png"><br/><br/> -->
             
         </div>
         <br/>
         <div>
-            Form <b>B</b> : indicates the date of transaction, you can expand this option : <br/><br/>
+            Form <b>B</b> : indicates the list of transactions, you can expand this option : <br/><br/>
             <img src="image/history/history_2b.png"><br/><br/>
+             <div>
+                <b>Note :</b>Since receipt is optional button <b>"Read Receipt"</b> won't appear unless you upload a receipt image.For example : <br/>
+                <img src="image/history/history_2c.png">
+            </div><br/>
             <div>
-                Form <b>X</b> : indicates to show description of transaction : <br/><br/>
+                Form <b>A</b> : indicates to show description of transaction : <br/><br/>
                 <img src="image/history/history_2bx.png">
             </div>
+            <div>
+                Form <b>B</b> : indicates to show uploaded receipt : <br/><br/>
+                <img src="image/history/history_2b2.png">
+            </div>
         </div>
-
     </p>
     <p>
         <h3>B.Charts</h3>
@@ -198,14 +225,16 @@
         <h3>C.Show Overall</h3>
         Show total spending according on recorded currency<br/><br/>
         <img src="image/history/history_4.png"><br/><br/>
-        <b>Note : </b> in this case we use USD as example currency,<br/> 
-        in real case it depends on the currency used by you, 
-        for example if on the tutorial we use USD and it's about <b>US$ 7.65</b><br />
-        Then let's say you use different currency like EUR and total EUR 3.55, <br />
-        then it's automatically will show the overall of EUR and USD.<br/><br/>
 
-        if you make another transaction with USD again let say <b>USD 4.35</b>, then the total would accumulate from previous,<br/>
-        so it would be 7.65 + 4.35 = <b>USD 12.00</b>.<br/><br/>
+        <b>Note : </b> We're using USD as an example here, but it’ll switch to your actual currency in the app.
+        For example, let's say you've already made a <b>$ 7.65</b> transaction.<br />
+        Next, if you want to use a different currency in <b>CAD</b> you've already made a let's say <b>CAD 58.44</b> transaction, <br />
+        It'll automatically show your total in USD, CAD, and other currencies like NZD, as seen in the screenshot below.<br/><br/>
+
+        If you add another USD transaction—let’s say <b>USD 51.55</b>—it will be added to your previous total.
+        So, 7.65 + 51.55 = <b>USD 59.2</b>.(based on the transactions shown)<br/><br/>
+        For example : <br/>
+        <img src="image/history/history_4b.png"><br/><br/>
 
         To change the currency you can open <b>Settings</b> then tab <b>Currency</b>
     </p>
@@ -338,6 +367,38 @@
             <img src="image/units/add_units_4.png"><br/><br/>
         </div>
         <br/>
+    </p>
+</div>
+
+<div class="tutorial d-none" id="res">
+    <h2>Backup And Restore Data</h2>
+    <p>
+        To perform back up and restore, first tap on icon : <br/><br/>
+        <img src="image/settings/settings_1.png"><br/><br/>
+        Then tap on :<br/><br/>
+        <img src="image/settings/settings_2.png"><br/><br/>
+        <img src="image/settings/settings_2a.png"><br/><br/>
+        <b>Note</b> : Choose any folder to use as your location for backing up and restoring files.
+        In this case we used folder "Test" as an example<br/><br/>
+        <img src="image/settings/settings_2b.png"><br/><br/>
+        <img src="image/settings/settings_2c.png"><br/><br/>
+
+    <h2>Backup Data</h2>
+        To backup data tap on menu "Backup Data" as seen as screenshot below : <br/><br/>
+        <img src="image/settings/settings_3.png"><br/><br/>
+        <img src="image/settings/settings_3a.png"><br/><br/>
+        <img src="image/settings/settings_3b.png"><br/><br/>
+
+    <h2>Restore Data</h2>
+    To restore data tap on menu "Restore Data" as seen as screenshot below : <br/><br/>
+        <img src="image/settings/settings_4.png"><br/><br/>
+        <img src="image/settings/settings_4a.png"><br/><br/>
+    <b>Note</b> : Select the file you'd like to restore. We only have a single file in this example,
+    but in practice, you can have many and can pick whichever one you need.<br/><br/>
+        <img src="image/settings/settings_4b.png"><br/><br/>
+    Once the restore is successful, you'll be redirected back to the home page.
+
+    <br/>
     </p>
 </div>
 
