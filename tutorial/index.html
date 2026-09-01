@@ -44,6 +44,10 @@
         .d-none{display : none}
 
         a {cursor:pointer}
+
+        .opt {color : #18acf6}
+
+        h5 b {color : #31b896}
     </style>
 
 </head>
@@ -55,321 +59,395 @@
     <div id="my_div" class="list">
         <li><a class="btn active" onclick="alt('qst')">Quick Start</a></li>
         <li><a class="btn" onclick="alt('hst')">History</a></li>
-        <li><a class="btn" onclick="alt('ast')">Add Store</a></li>
-        <li><a class="btn" onclick="alt('ait')">Add Items</a></li>
-        <li><a class="btn" onclick="alt('act')">Add Category</a></li>
-        <li><a class="btn" onclick="alt('aut')">Add Units</a></li>
+        <li><a class="btn" onclick="alt('ast')">Store</a></li>
+        <li><a class="btn" onclick="alt('act')">Category</a></li>
+        <li><a class="btn" onclick="alt('ait')">Expenses</a></li>
+        <li><a class="btn" onclick="alt('aut')">Units</a></li>
         <li><a class="btn" onclick="alt('res')">Backup And Restore Data</a></li>
+        <li><a class="btn" onclick="alt('ovw')">Overflow Text</a></li>
     </div>
 </p>
 
 <div class="tutorial" id="qst">
 <h2>Quick Start</h2>
 <p>
-    Please tab on <b>Add Shop</b> to create note of your spent<br/>
+    <h5><b>Introduction</b></h5>
+    Please tab on <b>Transaction</b> to create your first transaction<br/>
     <div class="text-center"><img src="image/shop/add_shop.png"></div><br/>
 
     Afterward you will see form like this : <br/><br/>
     <div class="text-center"><img src="image/shop/add_shop_1.png"></div><br/>
 
-    <div>
-        Form <b>A</b> : indicates the date when you make a note of shopping / spending your budget.
-    </div>
+    <p>
+        <b>Date</b>: Tap to change the date of your transaction.
+    </p>
+    <p>
+        <b>Store</b>: Enter the store name for your transaction. This is <b>optional</b> and can be left blank.
+    </p>
+    <p>
+        <b>Description</b>: Add a simple note for your transaction. This is <b>optional</b> and can be left blank.
+    </p>
+    <p>
+        <b>Transaction Plan</b>: Save a transaction for the future instead of adding it directly to your history. You can view, edit, delete, or submit your saved plans from the Plans tab.
+        <br/>
+        <b>Note:</b><span>As noted in your warning notification, currency and currency position cannot be changed. The free tier allows a maximum of 3 plans.</span>
+    </p>
+    
     <br/>
-    <div>
-        Form <b>B</b> : indicates which store that you went shopping at.
-    </div><br/>
 
-    If you tap on <b>date</b> (form <b>A</b>) you will see a page like this : <br/><br/>
+    If you tap on <b>Date</b> you will see a page like:<br/><br/>
     <div class="text-center"><img src="image/shop/add_shop_1a.png"></div><br/>
 
-    and when you tap on <b>store</b> (form <b>B</b>) you will see :<br/><br/>
+    If you tap on <b>Store</b> you will see:<br/><br/>
     <div class="text-center"><img src="image/store/add_store_0.png"></div><br/>
 
-    Tab on (+) button to add store, and then you will be redirected to this page : <br/><br/>
+    Tab on (+) button to add store, and then you will open this page : <br/><br/>
     <div class="text-center"><img src="image/store/add_store_1.png"></div><br/>
-    Fill in the required form as <b>Store Name</b> and others are optional, then tab on button <b>Submit</b>.<br/><br/>.
+    <b>Store Name</b> is required while other fields are optional, you can only enter store name using standard characters or underscores, for example: <u>teststore</u> or <u>test_store</u>, other characters will be rejected.<br/><br/>.
+    
+    Tap the Submit button to save and return to the previous page, where your new store name will appear: <br/><br/>
+    <div class="text-center"><img src="image/shop/add_shop_1c.png"></div><br/>
     For more detail about add store please take a look : <a class="list" onclick="alt('ast')">Add Store</a>.<br/><br/>
 
-    <b>NOTE :</b> if you have created a store already before, you can add by tapping on the title. In here for example you can tapping at <b>test store</b><br/><br/>
+    <b>NOTE :</b>If you have already created a store, simply tap the title to select or enable it<br/><br/>
+    <div class="text-center"><img src="image/shop/add_shop_1b.png"></div><br/>
 
-    After you tap on the submit button, you will be redirected back to the previous page, but with the name of the store : <br/><br/>
-    <div class="text-center"><img src="image/shop/add_shop_1c.png"></div><br/>
-
-    <b>Note : </b> You can also fill in a description of your spending, but this is optional.<br><br/>
-
-    Now, it's time to add your items into cart, please tap on cart button :<br><br/>
+   
+    <h5><b>Form Expenses</b></h5>
+    Tap on <b>Add Expenses</b> button :<br><br/>
     <div class="text-center"><img src="image/shop/add_shop_2.png"></div><br/>
 
-    it will display a popup form :<br><br/>
-    <div class="text-center"><img src="image/shop/add_shop_2x.png"></div><br/>
+    then it will display a popup form :<br><br/>
+    <div class="text-center">
+        <img src="image/shop/add_shop_2y.png">
+        <div><b>Form A</b></div><br/>
+        <img src="image/shop/add_shop_2x.png">
+        <div><b>Form B</b></div>
+    </div>
 
-    <div>
-        Form <b>A</b> : indicates item name you want to note and save, To add item please take a look : <a onclick="alt('ait')" class="list">Add Item</a>.
-    </div>
-    <br/>
-    <div>
-        Form <b>B</b> : indicates unit name of item to scale the item, this is optional, to add unit please see : <a class="list">Add Unit</a>.
-    </div>
-    <br/>
-    <div>
-        Form <b>C</b> : indicates the price of item, this will show : <br/><br/>
+    <p>
+        Before getting started, here is a quick explanation of <b>Form A</b> and <b>Form B</b> shown in the images above.<br/>
+        The form displayed depends on the category you select. When creating a category, you will see two fields: 
+        <ul>
+            <li class="opt">Category Name</li>
+            <li class="opt">Show Unit And Quantity</li>
+        </ul> 
+
+        If you select <b>Yes</b> for the <b>Show Unit And Quantity</b> field, Form B will appear when adding an expense with this category. Otherwise, Form A will be used.<br/>
+        For more details, go to the <a onclick="alt('act')" class="list">Category Page</a>
+    </p>
+
+    <h5><b>Add Expenses Form B</b></h5>
+
+    <p>
+        <b>Expense</b>: Tap to add to your transaction.
+        For more details, go to the <a onclick="alt('ait')" class="list">Expenses Page</a>
+    </p>
+    <p>
+        <b>Units</b>: Tap to enable unit on your transaction, this is <b>optional</b>, and can be left blank.
+        For more details, go to the <a class="list">Add Unit Page</a>
+    </p>
+    <p>
+        <b>Price</b>:Tap to enter a price for your expense, and the keypad will appear like:<br/><br/>
         <img src="image/shop/add_shop_3.png"><br/><br/>
-        The max length of numbers is <b>9</b> for example : <b>1,000,000,000</b> and also the max decimal number is <b>2</b> so it will : <b>1,000,000,000.11</b>
-        Afterward tap at <b>E/C</b> if you want to add the number.
-    </div>
-    <br/>
-    <div>
-        Form <b>D</b> : indicates the quantity of item, this will show : <br/><br/>
+        The maximum amount for fiat is <b>9,999,999,999.99</b>,<br>
+        and the crypto amount will automatically adjust. For example, Bitcoin <b>(BTC)</b> can be entered up to : 1,000.99999999<br/>
+        and USD Coin <b>(USDC)</b> can be entered up to : 10,000.999999.<br/>
+        After entering the amount you can tap <b>E/C</b> to submit.
+    </p>
+
+    <p>
+        <b>Qty</b>:Tap to enter a quantity for your expense, and the keypad will appear like:<br/><br/>
         <img src="image/shop/add_shop_4.png"><br/><br/>
-        The max value of qty is <b>1,000</b> and decimal number not available
-        tap at <b>E/C</b> to insert the qty.
-    </div>
+        The maximum value is <b>1,000</b>.<br>
+        After entering the value you can tap <b>E/C</b> to submit.
+    </p>
+    
     <br/>
-    <b>Note :</b> if you want to change the value of <b>price</b> or <b>qty</b> just change the number or if you want to cancel or make it empty just delete the whole number OR leave it empty and then tap at <b>E/C</b>.
+    <b>Note:</b> To clear or empty either the Price or Qty value, leave the field blank and tap <b>E/C</b>.
 
     <br/><br/>
-    Here the result after you fill the whole form : <br/><br/>
+    Here is the result after you fill out the entire form. : <br/><br/>
     <img src="image/shop/add_shop_5.png"><br/><br/>
 
-    Tap at submit button, then cart will displaying : <br/>
+    Tap the Submit button, and the list will appear as follows: <br/><br/>
     <img src="image/shop/add_shop_6.png" /><br/><br/>
 
-    <b>Note</b> : If you want to upload a receipt (this is optional) you can tap on  :<br/><br/>
+    <h5><b>Add Expenses Form A</b></h5>
+    The steps are same with Form B, but only needs to fill expenses and price fields.<br/><br/>
+    <img src="image/shop/add_shop_2y.png"/><br/>
+    <img src="image/shop/add_shop_6x.png"><br/>
+    <img src="image/shop/add_shop_6y.png"><br/>
+    <img src="image/shop/add_shop_6z.png"><br/><br/>
+
+    <b>Note</b>: Tap the <b>upload recipe</b> button if you want to attach a receipt. This step is <b>optional</b>:<br/><br/>
     <img src="image/shop/add_shop_6a.png"><br/>
     It will display : <br/><br/>
     <img src="image/shop/add_shop_6b.png"><br/>
-    Then choose a receipt image or photo. Ii will showing : <br /><br/>
+    Then select a receipt image or a photo. It will show: <br /><br/>
     <img src="image/shop/add_shop_6c.png"><br/>
 
-    Then finally tap at submit button then congratulation or your create your first transaction,<br>
-    it will show notification at the bottom screen : <br/><br/>
+    Tap the submit button to create your transaction.<br>
+    A notification will appear at the bottom of the screenn : <br/><br/>
     <img src="image/shop/add_shop_7.png"><br/><br/>
 
-    <h2>Add To Shopping List</h2>
+    <h2>Transaction Plans</h2>
 
-    Add To Shopping List option is to note your transaction temporarily,<br/> you can decide whether want to delete it or save it into history
-    Just do the same as first transaction but choose Add To Shopping List form <b>Yes</b>: <br/><br/>
+    The Transaction Plans option allows you to log a transaction temporarily.<br/>
+    You can later choose to delete it or save it to your history. 
+    To use this, create a transaction as usual, but set the <b>Transaction Plans</b> option to <b>Yes</b>.
+    <br/><br/>
     <img src="image/shop/add_shop_8.png"><br/><br/>
     <img src="image/shop/add_shop_9.png"><br/><br/>
     <img src="image/shop/add_shop_10.png"><br/><br/>
 
-    Afterward tap on button, you will be redirected back to multi shop page : <br/><br/>
+    Tap the Submit button, and your transaction will appear on the <b>Transaction Plan</b> page: <br/><br/>
     <div class="text-center"><img src="image/shop/add_shop_11.png"></div><br/>
     <div class="text-center"><img src="image/shop/add_shop_12.png"></div><br/>
     <div class="text-center"><img src="image/shop/add_shop_13.png"></div><br/>
 
     <p>
-        <b>Note</b> : If you choose <b>Yes</b> to <b>Add To Shopping List</b> you cannot to upload a receipt at front page, you can upload a receipt photo/image at shopping list page
+        <b>Note</b> : By choosing <b>Transaction Plans</b>, you cannot upload a receipt on the initial screen, 
+        but you can upload a receipt photo later on the <b>Transaction Plans</b> page. 
+        Additionally, the free version allows a maximum of 3 transaction plans.
     </p>
 
-    Tap on <b>Save to History</b> and your transaction will saved to history.<br/>
-    To check your transactions you can visit <a onclick="alt('hst')" class="list">history page</a>.
+    Tap the <b>Save to History</b> button to save your transaction.<br/>
+    To view your saved transactions, go to the <a onclick="alt('hst')" class="list">history page</a>.
     </p>
 
     <i>
         Source : Image item like grape, apple generated with Google Gemini<br/>
     </i>
-</div><!-- end tutorial -->
+</div><!-- end quickstart -->
 
+<!-- History -->
 <div class="tutorial d-none" id="hst">
     <h2>History</h2>
     <p>
-        <h3>A.Report</h3>
-        After you created transaction successfully, in this page you can see about yours
-        transaction records.<br/>
-        please tap on  : <br/><br/>
+        After you create the transaction, you can view the record on this page. To view tap on: <br/><br/>
         <img src="image/history/history_0.png"><br/><br/>
         <img src="image/history/history_1.png"><br/><br/>
-        <div>
-            Form <b>A</b> : indicates which transaction range that you want to see.<br/><br/>
+         <b>A</b>: An optional button to display search options.<br/><br/>
+         <b>B</b>: The List of transactions<br/><br/>
+         <b>C</b>: The <b>Show Overall</b> button, to show the total expenses according to date range or by search query<br/><br/>
+        
+         <h3>A.Reports</h3>
+         <div>
             <img src="image/history/history_2.png"><br/><br/>
-
-            Form <b>A1</b> : indicates which date the transaction that you want to see.<br/><br/>
+            <b>A1:</b> Shows transaction records within the selected date range<br/><br/>
             <img src="image/history/history_2A.png"><br/><br/>
             
-            The arrows indicates to show calendar as options to change the date : <br/><br/>
-            <img src="image/history/history_2Ax.png"><br/><br/>
+            Tapping on either date will open the screen shown below:<br/><br/>
+            <img src="image/shop/add_shop_1a.png"><br/><br/>
 
-             Form <b>A2</b> : Indicates if you want to see the entire records, <br/>
-             <b>NOTE</b> : Search for something to see this option. After type the query don't forget to tap on this button to generate new results.<br/><br/>
+            <b>A2:</b> The <b>Search All</b> button, displays all your transactions that match the search query.<br/>
+            <b>Note:</b> This button only appears when the search bar is not empty.<br/><br/>
             <img src="image/history/history_2AB.png"><br/><br/>
             <!--<img src="image/history/history_2b1.png"><br/><br/> -->
             
         </div>
         <br/>
         <div>
-            Form <b>B</b> : indicates the list of transactions, you can expand this option : <br/><br/>
-            <img src="image/history/history_2b.png"><br/><br/>
-             <div>
-                <b>Note :</b>Since receipt is optional button <b>"Read Receipt"</b> won't appear unless you upload a receipt image.For example : <br/>
-                <img src="image/history/history_2c.png">
-            </div><br/>
+            <b>B:</b> Tap this icon to expand and view the transaction details.<br/><br/>
+            <img src="image/history/history_2b.png"><br/>
+            <h5><b>Detail Transaction</b></h5>
+
             <div>
-                Form <b>A</b> : indicates to show description of transaction : <br/><br/>
+                <b>X:</b> Tap the icon to shows transaction's description.<br/><br/>
                 <img src="image/history/history_2bx.png">
             </div>
+            <br/><br/>
             <div>
-                Form <b>B</b> : indicates to show uploaded receipt : <br/><br/>
+                <b>Y:</b> The <b>Receipt Button</b> to shows uploaded receipt<br/><br/>
                 <img src="image/history/history_2b2.png">
             </div>
         </div>
+        <br/>
+        <div>
+            <b>Note :</b>Since uploading a receipt is optional, the <b>"Read Receipt"</b> button will only appear after you upload a receipt image.<br/> 
+            The image below shows an example transaction without a receipt: <br/>
+            <img src="image/history/history_2c.png">
+        </div>
     </p>
+    <br/>
     <p>
         <h3>B.Charts</h3>
         The history data can be displayed as charts also : <br/><br/>
         <img src="image/history/history_3.png"><br/><br/>
-        The button <b>Show Calendar</b> will also have same effects as calendar icon at report page.
+        The <b>Show Calendar</b> button also has the same effect as tapping the calendar on the history record page.
     </p>
     <p>
         <h3>C.Show Overall</h3>
-        Show total spending according on recorded currency<br/><br/>
+        Show the total transaction according to selected currencies<br/><br/>
         <img src="image/history/history_4.png"><br/><br/>
 
-        <b>Note : </b> We're using USD as an example here, but it’ll switch to your actual currency in the app.
-        For example, let's say you've already made a <b>$ 7.65</b> transaction.<br />
-        Next, if you want to use a different currency in <b>CAD</b> you've already made a let's say <b>CAD 58.44</b> transaction, <br />
-        It'll automatically show your total in USD, CAD, and other currencies like NZD, as seen in the screenshot below.<br/><br/>
+        <b>Note : </b> We're using AUD as an example here, but it’ll switch to your actual currency in the app.
+        For example, let's say you've already made a <b>A$ 7.65</b> transaction.<br />
+        Next, if you want to use a different currency in <b>CAD</b> you've already made a let's say <b>CA$ 52.02</b> transaction, <br />
+        It'll automatically show your total in AUD, CAD, and other currencies like SGD or cryptocurrency TRON, as seen in the screenshot below.<br/><br/>
 
-        If you add another USD transaction—let’s say <b>USD 51.55</b>—it will be added to your previous total.
-        So, 7.65 + 51.55 = <b>USD 59.2</b>.(based on the transactions shown)<br/><br/>
+        If you add another AUD transaction—let’s say <b>A$ 25</b>—it will be added to your previous total.
+        So, 7.65 + 25 = <b>A$ 32.65</b>.(based on the transactions shown)<br/><br/>
         For example : <br/>
         <img src="image/history/history_4b.png"><br/><br/>
 
         To change the currency you can open <b>Settings</b> then tab <b>Currency</b>
     </p>
 </div>
+<!-- end history -->
 
+<!-- Store -->
 <div class="tutorial d-none" id="ast">
-    <h2>Add Store</h2>
+    <h2>Store</h2>
     <p>
-        To Add Store, first tap on icon : <br/><br/>
+        Tap to the icon to create a store: <br/><br/>
         <img src="image/store/add_store.png"><br/><br/>
-        it will redirect to : <br/><br/>
         <img id="store_add" src="image/store/add_store_0.png"><br/><br/>
-        tap plus icon and then tap on submit button : <br/><br/>
+        Tap the <b>plus icon</b> to open the following page : <br/><br/>
         <img src="image/store/add_store_1.png"><br/><br/>
-        after you tap on submit button you will be redirect into page : <br/><br/>
+        Fill in the <b>store name</b> (required) field and then tap the submit button to open the following page : <br/><br/>
         <img src="image/store/add_store_2.png"><br/><br/>
 
         <div>
-            Form <b>A</b> : To add store the same effects as plus button <a class="list" href="#store_add">here</a>.
+            <b>A:</b> This button has the same effecs as the <b>plus button</b>. Take a look <a class="list" href="#store_add">here</a>.
         </div>
         <br/>
         <div>
-            Form <b>B</b> : To show detail about the store you saved. <br/><br/>
+            <b>B:</b> Show the detail about the store you have created.<br/><br/>
             <img src="image/store/add_store_3.png">
         </div>
         <br/>
     </p>
 </div>
+<!-- end Store -->
 
-<div class="tutorial d-none" id="ait">
-    <h2>Add Item</h2>
-    <p>
-        To Add item, first tap on icon : <br/><br/>
-        <img src="image/item/add_item.png"><br/><br/>
-        it will redirect to : <br/><br/>
-        <img id="item_add" src="image/item/add_item_0.png"><br/><br/>
-        tap plus icon and then tap on submit button : <br/><br/>
-        <img src="image/item/add_item_1.png"><br/><br/>
-
-        <div>
-            Form <b>A</b> : To add item's category, regarding how to add category you can see here : <a onclick="alt('act')" class="list">Add Category</a>.
-        </div>
-        <br/>
-        <div>
-            Form <b>B</b> : To put an image on item. You can put it from gallery or by taking a photo either <br/><br/>
-            <img src="image/item/add_item_2.png">
-        </div>
-        <br/>
-
-        If you choose to use an image it will be : <br/><br/>
-        <img src="image/item/add_item_3.png"><br/><br/>
-
-        Tap at submit button, and then it will redirect to : <br/><br/>
-        <img src="image/item/add_item_4.png"><br/><br/>
-
-        <div>
-            Form <b>A</b> : To add item the same effects as plus button <a class="list" href="#item_add">here</a>.
-        </div>
-        <br/>
-        <div>
-            Form <b>B</b> : To display detail image item, and you can download it.<br/>
-            <b>NOTE : </b> if you add item without an image, this icon button won't appear.
-            <br/><br/>
-            <img src="image/item/add_item_5.png">
-        </div>
-        <br/>
-        <div>
-            Form <b>C</b> : To edit your saved item.
-        </div>
-        <br/>
-    </p>
-</div>
-
+<!-- Category -->
 <div class="tutorial d-none" id="act">
-    <h2>Add Category</h2>
+    <h2>Category</h2>
     <p>
-        To Add Category, first tap on icon : <br/><br/>
+        Tap the icon below to create a <b>category</b> : <br/><br/>
         <img src="image/category/add_category_0.png"><br/><br/>
-        it will redirect to : <br/><br/>
         <img id="category_add" src="image/category/add_category_1.png"><br/><br/>
-        Fill the form, and tap the submit button, <br/><br/>
         <img src="image/category/add_category_2.png"><br/><br/>
-        and then it will redirect to : <br/><br/>
-        <img src="image/category/add_category_4.png"><br/><br/>
-        <b>NOTE : </b>If you open this page from item page, to add category/subcategory into item
-        the <b>Eye</b> icon (B) will be change like this : <br/><br/>
+
+        <b>Category Name:</b> The name of category.<br/><br/>
+        <b>Show Unit And Quantity:</b> This option affects the expense form on the transaction page, for example:<br/>
+
+        <p>if <b>Yes</b> it will affect:</p>
+        <img src="image/shop/add_shop_2x.png"><br/><br/>
+        <p></p>if <b>No</b> it will affect:</p>
+        <img src="image/shop/add_shop_2y.png"><br/><br/>
+
+        Tap the submit button to open the following page: <br/><br/>
         <img src="image/category/add_category_3.png"><br/><br/>
 
-        <div>
-            Form <b>A</b> : To add category the same effects as plus button <a class="list" href="#category_add">here</a>.
-        </div>
+        <b>A:</b> This icon has the same effect as <b>plus icon</b>.<br/><br/>
+        <b>B:</b> Tap here to open the <b>subcategory page</b>, where you can create and edit subcategories.<br/><br/>
+    
+        <b>NOTE : </b>If you open this page from the <b>expenses page</b>,
+        the <b>Eye</b> icon (B) will change to this : <br/><br/>
+        <img src="image/category/add_category_4.png"><br/><br/>
+        
+        <b>X:</b> This icon has the same effect as <b>plus icon</b>.<br/><br/>
+        <b>Y:</b> Tap here to open the <b>subcategory page</b>, where you can pickup a subcategory.<br/><br/>
+        <b>Z:</b> Tap here to open the <b>category page</b>, where you can edit a category.<br/><br/>
+
         <br/>
+
         <h2>Add Sub Category</h2>
         <div>
-            Form <b>B</b> : To display subcategory page, you can create subcategory page here.<br/><br/>
+            Tap the <b>+</b> icon button in the top right corner to create ,edit or delete a <b>subcategory</b>, as shown in the image below :<br/><br/>
             <img src="image/category/add_sub_category.png"><br/><br/>
             
-            Tap at plus icon and form will appear : <br/><br/>
+            Then, the form will appear as shown in the image below : <br/><br/>
             <img src="image/category/add_sub_category_2.png"><br/><br/>
 
-            Fill the subcategory name and the tap at submit button, then : <br/><br/>
+            Fill in the <b>subcategory name</b>, then tap the submit button and here's the result: <br/><br/>
             <img src="image/category/add_sub_category_3.png">
         </div>
         <br/>
         <div>
-            Form <b>C</b> : To edit your saved category.
+            <b>Icon Pencil:</b> To edit a saved subcategory.<br/>
+            <b>Icon Trash:</b> To delete a saved subcategory.
         </div>
         <br/>
     </p>
 </div>
+<!-- end Category -->
 
+<!-- Expenses -->
+<div class="tutorial d-none" id="ait">
+    <h2>Add Expenses</h2>
+    <p>
+        Tap the icon below to create a <b>expense</b> : <br/><br/>
+        <img src="image/item/add_item.png"><br/><br/>
+        <img id="item_add" src="image/item/add_item_0.png"><br/><br/>
+        <img src="image/item/add_item_1.png"><br/><br/>
+
+        <b>Expense Name:</b> The name of expense.<br/><br/>
+        <b>Expense Category:</b> Tap here to open the <b>category</b> page and select a category for your expense. 
+        <br/>For details on how to create a category, check out <a onclick="alt('act')" class="list">Add Category</a><br/><br/>
+        <b>Camera Icon Button (X) :</b> Tap here to add an image for your expense. This is <b>optional</b>.<br/><br/>
+        
+        <h5><b>Create Expenses</b></h5>
+        
+        <p>
+            Fill in the <b>Expense Name</b> field, and then select a category for your expense, as shown below:<br/><br/>
+            <img src="image/item/expense_1.png"><br/><br/>
+            <div>Tap the <b>Expense Category</b> field.</div><br/>
+            <img src="image/item/expense_2.png"><br/><br/>
+            <div>Tap <b>category name</b>, in this example: <b>groceries</b></div><br/>
+
+            <img src="image/item/expense_3.png"><br/><br/>
+            <div>Tap the <b>Camera Icon</b> button if you want to upload an image, as shown below:</div><br/>
+           <!--  <img src="image/item/add_item_2.png"><br/><br/> -->
+            <img src="image/shop/add_shop_6b.png"><br/><br/>
+        </p>
+        
+        <img src="image/item/add_item_3.png"><br/><br/>
+
+        Tap the <b>submit</b> button, and you will be redirected to the page below: <br/><br/>
+        <img src="image/item/add_item_4.png"><br/><br/>
+
+        <div>
+            <b>A:</b> This button has the same effecs as the <b>+</b> button. Take a look <a class="list" href="#item_add">here</a>.<br/><br/>
+            <b>B:</b> Tap this button to view a detailed image of the expense page.<br/>
+            <b>NOTE:</b> This button will not appear unless you upload an image.<br/><br/>
+            <img src="image/item/add_item_5.png"><br/><br/>
+            <b>C:</b> To edit a saved expense.<br/>
+            <b>D:</b> To delete a saved expense.
+        </div>
+    </p>
+</div>
+<!-- end Expenses -->
+
+<!-- Units -->
 <div class="tutorial d-none" id="aut">
     <h2>Add Units</h2>
     <p>
-        To Add Unit, first tap on icon : <br/><br/>
+        Tap the icon below to create a <b>Units</b>: <br/><br/><br/><br/>
         <img src="image/units/add_units.png"><br/><br/>
-        it will redirect to : <br/><br/>
         <img id="unit_add" src="image/units/add_units_1.png"><br/><br/>
-        Tap at plus button, and then form will appear, fill the form <br/><br/>
+        Tap the <b>+</b> button and then fill in the form.<br/><br/>
         <img src="image/units/add_units_2.png"><br/><br/>
-        tap at submit button and then it will be redirect to : <br/><br/>
-        <img src="image/units/add_units_3.png"><br/><br/>
+        Tap the <b>submit</b> button and it will be redirected to the page below: <br/><br/>
+        <img src="image/units/add_units_3.png"><br/>
+
+        <h5><b>Detail Unit</b></h5>
 
         <div>
-            Form <b>A</b> : To add unit the same effects as plus button <a class="list" href="#unit_add">here</a>.
-        </div>
-        <br/>
-        <div>
-            Form <b>B</b> : To display detail page of unit<br/><br/>
+            <b>A:</b> This button has the same effect as <b>+</b> button. Take a look <a class="list" href="#unit_add">here</a>.<br/><br/>
+            <b>B:</b> Tap this button to view a detailed of the unit.<br/><br/>
             <img src="image/units/add_units_4.png"><br/><br/>
+            <b>C:</b> Tap this button to edit a saved expense.<br/>
+            <b>D:</b> Tap this button to delete a saved expense.
         </div>
-        <br/>
     </p>
 </div>
+<!-- end Units -->
 
+<!-- Backup And Restore Data -->
 <div class="tutorial d-none" id="res">
     <h2>Backup And Restore Data</h2>
     <p>
@@ -401,6 +479,20 @@
     <br/>
     </p>
 </div>
+<!-- end Backup And Restore Data -->
+
+<!-- Overflow Text -->
+ <div class="tutorial d-none" id="ovw">
+    <h2>Overflow Text</h2>
+    <p>
+        Sometimes if you find an amount text overflows, as shown in the image below:<br/><br/>
+        <img src="image/settings/overflowtext_1.png"><br/><br/>
+        You need to tap the amount to display the full number. Take a look at the image below:<br/><br/>
+        <img src="image/settings/overflowtext_2.png"><br/><br/>
+        <img src="image/settings/overflowtext_3.png">
+    </p>
+ </div>
+<!-- End Overflow Text -->
 
 </body>
 
